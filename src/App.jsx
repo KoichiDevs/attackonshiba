@@ -13,7 +13,6 @@ const App = () => {
     return (
         <>
             <Hero />
-            <Features />
             <History />
             <Tokenomics />
             <Roadmap />
