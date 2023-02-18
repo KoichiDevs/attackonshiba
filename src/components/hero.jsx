@@ -45,7 +45,7 @@ const Hero = () => {
             <div className='w-full max-w-[1700px] mx-auto sm:px-14 mt-14 relative h-[20%] '>
                 <div className='text-button md:text-6xl font-bold text-4xl absolute bottom-0 mx-auto left-0 right-0 w-fit sm:auto sm:right-auto sm:w-auto sm:px-12'>
                     <motion.div variants={variants} animate="animate" initial="initial" className='flex items-center gap-x-3'>
-                        <img src="/aotlogo.webp" alt="logo" className='w-16'></img>
+                        <img src="/aoshiblogo.webp" alt="logo" className='w-16'></img>
                         <h1 className='font-noto'>柴犬の攻撃</h1>
                     </motion.div>
                     <motion.h1 initial={{ opacity: 0, y: -100 }} animate={{ opacity: 100, y: 0 }} transition={{ delay: 0.8, duration: 2, type: "spring", stiffness: 200 }} className='font-aot font-medium'>Attack On Shiba</motion.h1>
