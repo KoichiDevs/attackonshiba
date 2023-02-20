@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
 
             <div className='w-full h-12 bg-button absolute bottom-0 flex text-white font-noto items-center justify-center'>
-                <p className='lg:text-sm t text-[10px]'>COPYRIGHT ATTACK ON SHIBA. 2023. ALL RIGHT RESERVED</p>
+                <p className='lg:text-sm t text-[10px]'>All Rights Reserved &copy; Attack On Shiba 2023</p>
             </div>
         </footer>
     )
