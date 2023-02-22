@@ -34,7 +34,7 @@ const Tokenomics = () => {
                         <h1 className='font-aot text-main lg:text-6xl text-5xl'>Tokenomics</h1>
                         <div className='font-bree text-main lg:text-6xl text-5xl mt-7 flex justify-between'>
                             <div>
-                                <h2>{count}%</h2>
+                                <h2 className='font-aot text-main lg:text-6xl text-5xl'>{count}%</h2>
                                 <p className='lg:text-1xl text-2xl mt-2 text-[#C4B05E]'>Total Tax</p>
                             </div>
         
