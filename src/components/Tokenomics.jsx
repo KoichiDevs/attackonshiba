@@ -37,9 +37,23 @@ const Tokenomics = () => {
                                 <h2 className='font-aot text-main lg:text-6xl text-5xl'>{count}%</h2>
                                 <p className='lg:text-1xl text-2xl mt-2 text-[#C4B05E]'>Total Tax</p>
                             </div>
-        
-                            
                         </div>
+                        <div className='grid grid-cols-3 mt-3'>
+                                 <div className='flex1'>
+                                <h2 className='font-aot text-main lg:text-3xl text-3xl'>1%</h2>
+                                <p className='lg:text-[15px] text-[10px] text-[#C4B05E]'>Liquidity Pool</p>
+                                </div>
+
+                                <div className='flex1'>
+                                <h2 className='font-aot text-main lg:text-3xl text-3xl'>2%</h2>
+                                <p className='lg:text-[15px] text-[10px] text-[#C4B05E]'>Rewards</p>
+                                </div>
+
+                                <div className='flex1'>
+                                <h2 className='font-aot text-main lg:text-3xl text-3xl'>4%</h2>
+                                <p className='lg:text-[15px] text-[10px] text-[#C4B05E]'>Treasury</p>
+                                </div>
+                                </div>
                     </div>
 
                 </div>
