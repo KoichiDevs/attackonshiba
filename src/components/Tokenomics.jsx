@@ -12,7 +12,7 @@ const Tokenomics = () => {
 
         if (circView) {
             setTimeout(() => {
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 7; i++) {
                     setTimeout(() => {
                         setCount(val => val + 1)
                     }, i * 120)
@@ -34,15 +34,21 @@ const Tokenomics = () => {
                         <h1 className='font-aot text-main lg:text-6xl text-5xl'>Tokenomics</h1>
                         <div className='font-bree text-main lg:text-6xl text-5xl mt-7 flex justify-between'>
                             <div>
-                                <h2>{count}%</h2>
-                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>BUY</p>
+                                <h2>1%</h2>
+                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>Liquidity Pool</p>
                             </div>
 
                             <div>
-                                <h2>{count}%</h2>
-                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>SELL</p>
+                                <h2>2%</h2>
+                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>Rewards</p>
                             </div>
-
+                            
+                            <div>
+                                <h2>4%</h2>
+                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>Treasury</p>
+                            </div>
+        
+                            
                         </div>
                     </div>
 
