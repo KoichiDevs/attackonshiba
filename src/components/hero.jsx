@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { MdOutlineClose } from 'react-icons/md'
 
 const Hero = () => {
@@ -51,9 +51,9 @@ const Hero = () => {
     }
 
     const popup = (
-        <div className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="HeroKey">
             <div className="w-full h-full bg-black opacity-50 absolute top-0 left-0 cursor-pointer" onClick={close}></div>
-            <div className="z-10 relative w-fit h-auto px-10 py-8 bg-[#24191e] text-white rounded-xl">
+            <motion.div initial={{scale: 0.5}} animate={{scale: 1}} exit={{scale: 0.5}} transition={{duration: 0.3}} className="z-10 relative w-fit h-auto px-10 py-8 bg-[#24191e] text-white rounded-xl">
 
                 <MdOutlineClose className='absolute top-4 right-4 text-white text-2xl cursor-pointer' onClick={close} />
                 <h1 className='font-aot text-3xl text-center'>Choose payment method</h1>
@@ -69,15 +69,16 @@ const Hero = () => {
                         )
                     })}
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 
     return (
 
         <section className='w-full h-screen min-h-[600px] overflow-hidden relative flex flex-col bg-main sm:gap-y-7 gap-y-3 sm:justify-start justify-between bg-hero bg-cover md:bg-right sm:bg-[center_right_-10rem] z-10'>
-
-            {buttonActive ? popup : null}
+            <AnimatePresence>
+                {buttonActive ? popup : null}
+            </AnimatePresence>
 
             <div className='absolute top-0 w-full h-2 bg-button shadow-upper'></div>
 

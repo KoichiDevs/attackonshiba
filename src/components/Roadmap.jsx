@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Phase from "../templates/Phase";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -79,17 +79,17 @@ const Roadmap = () => {
 	}
 
 	const popup = (
-		<div className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center">
+		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="RoadmapKey">
 			<div className="w-full h-full bg-black opacity-50 absolute top-0 left-0 cursor-pointer" onClick={close}></div>
-			<div className="z-10 relative w-fit h-auto px-10 pb-14 pt-10 bg-[#24191e] text-white rounded-xl">
+			<motion.div initial={{ scale: 0.5 }} animate={{ scale: 1 }} exit={{ scale: 0.5 }} transition={{ duration: 0.3 }} className="z-10 relative w-fit h-auto px-10 pb-14 pt-10 bg-[#24191e] text-white rounded-xl">
 
 				<h1 className="text-center font-aot text-5xl">Disclaimer!</h1>
 
 				<MdOutlineClose className='absolute top-4 right-4  text-2xl cursor-pointer' onClick={close} />
 				<p className="font-poppins max-w-[45rem] mt-5 md:text-lg text-sm">Attack on Shiba refers to all components of the project, including but not limited to the overall project, token, website, and smart contracts. As discussed in this white paper, Attack on Shiba is not a licensed, unlicensed, or exempted financial or payment service of any kind, or in any jurisdiction. The information presented herein is intended only for reference and does not have any effective or legal meaning, irrespective of any implied meanings. Additionally, since Attack on Shiba operates as a decentralized community, it has no owners, shareholders, managers, directors, or any other entities exerting control over or upon it, directly or otherwise. Attack on Shiba makes no representations as to the value or utility of its token or other assets, and does not hold itself out to be a security or regulated financial instrument of any kind. The foregoing document is not intended as an invitation or solicitation to invest in Attack on Shiba or any other investment vehicle. Nor does Attack on Shiba make any representations whatsoever as to the future performance of its investments or underlying assets, nor those of any other entity connected to the same. All users bear complete responsibility to perform adequate due diligence, including seeking legal, financial, or regulatory counsel prior to interacting with Attack on Shiba, its website, tokens, and any other assets described herein.</p>
 
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	)
 
 	return (
@@ -98,7 +98,10 @@ const Roadmap = () => {
 			<div className="absolute w-full h-full bg-topog bg-[length:400px_400px] shadow-road"></div>
 
 			<div className="w-full h-auto mx-auto max-w-[1700px] md:px-10 px-5 text-main pt-24 z-10 relative pb-28">
-				{buttonActive ? popup : null}
+				<AnimatePresence>
+					{buttonActive ? popup : null}
+				</AnimatePresence>
+
 				<h1 className="font-aot lg:text-6xl text-5xl text-center">
 					Our Roadmap
 				</h1>
