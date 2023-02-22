@@ -35,17 +35,17 @@ const Tokenomics = () => {
                         <div className='font-bree text-main lg:text-6xl text-5xl mt-7 flex justify-between'>
                             <div>
                                 <h2>1%</h2>
-                                <p className='lg:text-2xl px-8 text-1xl mt-2 text-[#C4B05E]'>Liquidity Pool</p>
+                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>Liquidity Pool</p>
                             </div>
 
                             <div>
                                 <h2>2%</h2>
-                                <p className='lg:text-2xl px-8 text-1xl mt-2 text-[#C4B05E]'>Rewards</p>
+                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>Rewards</p>
                             </div>
                             
                             <div>
                                 <h2>4%</h2>
-                                <p className='lg:text-2xl px-8 text-1xl mt-2 text-[#C4B05E]'>Treasury</p>
+                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>Treasury</p>
                             </div>
         
                             
