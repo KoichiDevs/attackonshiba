@@ -12,12 +12,15 @@ const App = () => {
 
     return (
         <>
-            <Hero />
+            <div className='z-50 relative'>
+                <Hero />
+
+            </div>
             <History />
             <Tokenomics />
             <Roadmap />
             <Contact />
-            <Footer/>
+            <Footer />
         </>
     )
 }
