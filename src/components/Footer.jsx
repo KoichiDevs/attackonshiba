@@ -10,8 +10,20 @@ const Footer = () => {
                 <div className='text-main'>
                     <h1 className='font-aot lg:text-5xl text-4xl lg:mt-0 mt-5'>Our Social Links</h1>
                     <div className='flex gap-x-4 text-2xl mt-3 w-fit mx-auto lg:mx-0'>
-                        <SiTwitter className='cursor-pointer hover:scale-[1.1] transition-all ease-in-out duration-300' />
-                        <FaTelegramPlane className='cursor-pointer hover:scale-[1.1] transition-all ease-in-out duration-300' />
+                        
+                        <a href="https://twitter.com/attackonshiba" target="_blank" rel="noreferrer noopener">
+                            <button>
+                                <SiTwitter className='cursor-pointer hover:scale-[1.1] transition-all ease-in-out duration-300' />
+                            </button>
+                        </a>
+
+                        <a href="https://t.me/attackonshiba" target="_blank" rel="noreferrer noopener">
+                            <button>
+                            <FaTelegramPlane className='cursor-pointer hover:scale-[1.1] transition-all ease-in-out duration-300' />
+                            </button>
+                        </a>
+
+                        
                     </div>
                 </div>
             </div>
