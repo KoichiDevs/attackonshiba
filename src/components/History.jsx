@@ -47,7 +47,7 @@ const History = () => {
                     <motion.img initial={{ y: 200 }} animate={animation} src="/startedscout.webp" alt="Scout" className='absolute lg:bottom-[-4rem] md:bottom-[-2rem] bottom-0 lg:w-[25rem] md:w-[20rem] w-[50%] lg:right-[-4rem] right-0'></motion.img>
                 </div>
                 <div className='w-full flex items-center justify-center flex-col gap-y-10'>
-                    <motion.h1 initial={{opacity: 0}} animate={ titleView ? {opacity: 100} : {}} transition={{duration: 0.5}} className='font-aot lg:text-6xl text-4xl w-[15rem] text-center lg:leading-[4rem] leading-[3rem]' ref={titleRef}>In a City Surrounded By titans</motion.h1>
+                    <motion.h1 initial={{opacity: 0}} animate={ titleView ? {opacity: 100} : {}} transition={{duration: 0.5}} className='font-aot lg:text-6xl text-4xl w-[15rem] text-center lg:leading-[4rem] leading-[3rem]' ref={titleRef}>AI shiba inu on our side!</motion.h1>
 
                     <motion.div initial={{opacity: 0}} animate={ secView ? {opacity: 100} : {}} transition={{duration: 0.5}} className='font-pop flex flex-col gap-y-10 max-w-[30rem] lg:max-w-[18rem] xl:max-w-[24rem] text-justify lg:text-lg text-sm text-white' ref={secRef}>
                         <p className='indent-7'>In the world of Attack on Shiba, the Inus ruled the land. But a new threat emerged as giant Shiba Inus rampaged through the countryside, controlled by an advanced AI. The military was no match for the AI-controlled giants, until a group of Shiba Inus from the city of Shiba stepped forward and tamed the rogue AI.</p>
