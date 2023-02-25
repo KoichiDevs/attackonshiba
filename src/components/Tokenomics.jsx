@@ -12,7 +12,7 @@ const Tokenomics = () => {
 
         if (circView) {
             setTimeout(() => {
-                for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 7; i++) {
                     setTimeout(() => {
                         setCount(val => val + 1)
                     }, i * 120)
@@ -32,18 +32,28 @@ const Tokenomics = () => {
                 <div className='w-full flex items-center justify-center'>
                     <div className='lg:w-[22rem] w-[18rem] text-center lg:ml-20'>
                         <h1 className='font-aot text-main lg:text-6xl text-5xl'>Tokenomics</h1>
-                        <div className='font-bree text-main lg:text-6xl text-5xl mt-7 flex justify-between'>
+                        <div className='font-bree text-main lg:text-6xl text-5xl mt-7 justify-between'>
                             <div>
-                                <h2>{count}%</h2>
-                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>BUY</p>
+                                <h2 className='font-aot text-main lg:text-6xl text-5xl'>{count}%</h2>
+                                <p className='lg:text-1xl text-2xl mt-2 text-[#C4B05E]'>Total Tax</p>
                             </div>
-
-                            <div>
-                                <h2>{count}%</h2>
-                                <p className='lg:text-3xl text-2xl mt-2 text-[#C4B05E]'>SELL</p>
-                            </div>
-
                         </div>
+                        <div className='grid grid-cols-3 mt-3'>
+                                 <div className='flex1'>
+                                <h2 className='font-aot text-main lg:text-3xl text-3xl'>1%</h2>
+                                <p className='lg:text-[15px] text-[10px] text-[#C4B05E]'>Liquidity Pool</p>
+                                </div>
+
+                                <div className='flex1'>
+                                <h2 className='font-aot text-main lg:text-3xl text-3xl'>2%</h2>
+                                <p className='lg:text-[15px] text-[10px] text-[#C4B05E]'>Rewards</p>
+                                </div>
+
+                                <div className='flex1'>
+                                <h2 className='font-aot text-main lg:text-3xl text-3xl'>4%</h2>
+                                <p className='lg:text-[15px] text-[10px] text-[#C4B05E]'>Treasury</p>
+                                </div>
+                                </div>
                     </div>
 
                 </div>
