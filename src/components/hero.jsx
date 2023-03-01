@@ -39,7 +39,26 @@ const Hero = () => {
         },
     }
 
-    const buywith = ['ETH', 'BNB', 'Shib', 'Arb']
+    const buywith = [
+        {
+            label: 'Eth',
+            link: ''
+        },
+        {
+            label: 'BNB',
+            link: ''
+        },
+        {
+            label: 'Shib',
+            link: ''
+        },
+        {
+            label: 'Arb',
+            link: ''
+        },
+
+    ]
+
     const [buttonActive, setActive] = useState(false)
 
     const open = () => {
@@ -53,7 +72,7 @@ const Hero = () => {
     const popup = (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="HeroKey">
             <div className="w-full h-full bg-black opacity-50 absolute top-0 left-0 cursor-pointer" onClick={close}></div>
-            <motion.div initial={{scale: 0.5}} animate={{scale: 1}} exit={{scale: 0.5}} transition={{duration: 0.3}} className="z-10 relative w-fit h-auto px-10 py-8 bg-[#24191e] text-white rounded-xl">
+            <motion.div initial={{ scale: 0.5 }} animate={{ scale: 1 }} exit={{ scale: 0.5 }} transition={{ duration: 0.3 }} className="z-10 relative w-fit h-auto px-10 py-8 bg-[#24191e] text-white rounded-xl">
 
                 <MdOutlineClose className='absolute top-4 right-4 text-white text-2xl cursor-pointer' onClick={close} />
                 <h1 className='font-aot text-3xl text-center'>Choose payment method</h1>
@@ -63,9 +82,12 @@ const Hero = () => {
                 <div className="flex items-center gap-x-3 mt-5 md:flex-row flex-col gap-y-3">
                     {buywith.map((items, index) => {
                         return (
-                            <div className='w-fit h-auto px-10 py-3 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' key={index}>
-                                <p>{items}</p>
-                            </div>
+                            <a href={items.link} target="_blank" rel="noreferrer noopener">
+                                <button className='w-fit h-auto px-10 py-3 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' key={index}>
+                                    <p>{items.label}</p>
+                                </button>
+                            </a>
+
                         )
                     })}
                 </div>
