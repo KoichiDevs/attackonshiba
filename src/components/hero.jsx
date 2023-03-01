@@ -42,7 +42,7 @@ const Hero = () => {
     const buywith = [
         {
             label: 'Eth',
-            link: ''
+            link: 'https://app.uniswap.org/#/swap?outputCurrency=0xf0a3a52eef1ebe77bb2743f53035b5813afe721f'
         },
         {
             label: 'BNB',
