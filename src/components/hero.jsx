@@ -105,7 +105,7 @@ const Hero = () => {
                                     <p>Buy token</p>
                                 </div>
                                 <div className='w-fit h-auto px-10 py-3 cursor-pointer text-main bg-none border-[1px] border-main hover:bg-main hover:text-button transition-all ease-in-out duration-300'>
-                                    <p>Chart</p>
+                                    <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x8a6fc18e27338876810e1770f9158a1a271f90ab" target="_blank">Chart</a>
                                 </div>
                             </motion.div>
                         </div>
