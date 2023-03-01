@@ -12,6 +12,8 @@ const App = () => {
 
     return (
         <>
+        <script async type="module" id="embrCheckout" src="https://scripts.embr.org/checkout/checkout.js" data-chain="ethereum" data-address="0xf0a3a52eef1ebe77bb2743f53035b5813afe721f">
+    </script>
             <div className='z-50 relative'>
                 <Hero />
 
