@@ -39,7 +39,7 @@ const Hero = () => {
         },
     }
 
-    const buywith = ['Eth', 'BNB', 'Shib', 'Arb']
+    const buywith = ['<a href="https://app.1inch.io/#/1/simple/swap/ATOS/ETH">ETH</a>', 'BNB', 'Shib', 'Arb']
     const [buttonActive, setActive] = useState(false)
 
     const open = () => {
