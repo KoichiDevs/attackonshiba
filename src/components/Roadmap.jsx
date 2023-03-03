@@ -26,15 +26,15 @@ const Roadmap = () => {
 			desc:
 				<>
 					<p>⚔️ Create socials</p>
-					<p>⚔️ Ama’s in private groups</p>
+					<p>⚔️ Ama&#39;s in private groups</p>
 					<p>⚔️ Private sale</p>
 					<p>⚔️ Launch website</p>
-					<p>⚔️ Influencer partnerships</p>
-					<p>⚔️ Dapps live</p>
-					<p>⚔️ AI bot live</p>
-					<p>⚔️ Launch on Eth, BSC, Shilb, Arb</p>
-					<p>⚔️ Buy with fiat, googlepay, applepay</p>
-					<p>⚔️ 500+ holders &#40;per chain&#41;</p>
+					<p>◈ Influencer partnerships</p>
+					<p>◈ Dapps live</p>
+					<p>◈ AI bot live</p>
+					<p>◈ Launch on Eth, BSC, Shilb, Arb</p>
+					<p>◈ Buy with fiat, googlepay, applepay</p>
+					<p>◈ 500+ holders &#40;per chain&#41;</p>
 				</>
 
 		},
@@ -42,27 +42,27 @@ const Roadmap = () => {
 			label: "Attack",
 			desc:
 				<>
-					<p>⚔️ CM/CG Listings</p>
-					<p>⚔️ Discord launch</p>
-					<p>⚔️ Aggressive marketing</p>
-					<p>⚔️ Whitepaper</p>
-					<p>⚔️ Website V2</p>
-					<p>⚔️ NFT group partnerships</p>
-					<p>⚔️ 1000+ holders</p>
-					<p>⚔️ Reward booster NFT launch</p>
-					<p>⚔️ CEX listings</p>
-					<p>⚔️ 10M MC</p>
+					<p>◈ CM/CG Listings</p>
+					<p>◈ Discord launch</p>
+					<p>◈ Aggressive marketing</p>
+					<p>◈ Whitepaper</p>
+					<p>◈ Website V2</p>
+					<p>◈ NFT group partnerships</p>
+					<p>◈ 1000+ holders</p>
+					<p>◈ Reward booster NFT launch</p>
+					<p>◈ CEX listings</p>
+					<p>◈ 10M MC</p>
 				</>
 		},
 		{
 			label: "Defend",
 			desc:
 				<>
-					<p>⚔️ Burn LP</p>
-					<p>⚔️ Bridge tokens</p>
-					<p>⚔️ Whitepaper V2</p>
-					<p>⚔️ 10000+ Holders</p>
-					<p>⚔️ Metaverse collaborations</p>
+					<p>◈ Burn LP</p>
+					<p>◈ Bridge tokens</p>
+					<p>◈ Whitepaper V2</p>
+					<p>◈ 10000+ Holders</p>
+					<p>◈ Metaverse collaborations</p>
 				</>
 		}
 	]
