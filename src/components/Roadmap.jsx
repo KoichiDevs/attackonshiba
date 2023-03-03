@@ -87,11 +87,9 @@ const Roadmap = () => {
 				<MdOutlineClose className='absolute top-4 right-4  text-2xl cursor-pointer' onClick={close} />
 				<p className="font-poppins max-w-[45rem] mt-5 md:text-lg text-sm">Attack on Shiba refers to all components of the project, including but not limited to the overall project, token, website, and smart contracts. As discussed in this white paper, Attack on Shiba is not a licensed, unlicensed, or exempted financial or payment service of any kind, or in any jurisdiction. The information presented herein is intended only for reference and does not have any effective or legal meaning, irrespective of any implied meanings. Additionally, since Attack on Shiba operates as a decentralized community, it has no owners, shareholders, managers, directors, or any other entities exerting control over or upon it, directly or otherwise. Attack on Shiba makes no representations as to the value or utility of its token or other assets, and does not hold itself out to be a security or regulated financial instrument of any kind. The foregoing document is not intended as an invitation or solicitation to invest in Attack on Shiba or any other investment vehicle. Nor does Attack on Shiba make any representations whatsoever as to the future performance of its investments or underlying assets, nor those of any other entity connected to the same. All users bear complete responsibility to perform adequate due diligence, including seeking legal, financial, or regulatory counsel prior to interacting with Attack on Shiba, its website, tokens, and any other assets described herein.</p>
 				
-			
+				
 			</motion.div>
-			<div className='w-fit h-auto px-10 py-3 cursor-pointer text-main bg-none border-[1px] border-main hover:bg-main hover:text-button transition-all ease-in-out duration-300'>
-                                    <a href="https://attackonshiba/atos-whitepaper.pdf" target="_blank">Whitepaper</a>
-                                </div>
+			
 		</motion.div>
 	)
 
