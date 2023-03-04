@@ -86,10 +86,10 @@ const Roadmap = () => {
 
 				<MdOutlineClose className='absolute top-4 right-4  text-2xl cursor-pointer' onClick={close} />
 				<p className="font-poppins max-w-[45rem] mt-5 md:text-lg text-sm">Attack on Shiba refers to all components of the project, including but not limited to the overall project, token, website, and smart contracts. As discussed in this white paper, Attack on Shiba is not a licensed, unlicensed, or exempted financial or payment service of any kind, or in any jurisdiction. The information presented herein is intended only for reference and does not have any effective or legal meaning, irrespective of any implied meanings. Additionally, since Attack on Shiba operates as a decentralized community, it has no owners, shareholders, managers, directors, or any other entities exerting control over or upon it, directly or otherwise. Attack on Shiba makes no representations as to the value or utility of its token or other assets, and does not hold itself out to be a security or regulated financial instrument of any kind. The foregoing document is not intended as an invitation or solicitation to invest in Attack on Shiba or any other investment vehicle. Nor does Attack on Shiba make any representations whatsoever as to the future performance of its investments or underlying assets, nor those of any other entity connected to the same. All users bear complete responsibility to perform adequate due diligence, including seeking legal, financial, or regulatory counsel prior to interacting with Attack on Shiba, its website, tokens, and any other assets described herein.</p>
-				
-				
+
+
 			</motion.div>
-			
+
 		</motion.div>
 	)
 
@@ -117,7 +117,16 @@ const Roadmap = () => {
 						})}
 					</Slider>
 				</div>
-				<div className="mx-auto w-fit h-auto px-12 py-3 font-aot text-3xl mt-10 bg-[#4a2013] text-white rounded-lg cursor-pointer" onClick={open}>Disclaimer</div>
+
+				<div className="flex mt-10 justify-center gap-x-5 md:flex-row flex-col items-center gap-y-5">
+					<button className="w-fit h-auto px-12 py-3 font-aot text-3xl bg-[#4a2013] text-white rounded-lg cursor-pointer" onClick={open}>Disclaimer</button>
+
+					<a href="https://attackonshiba.com/atos-whitepaper.pdf" target="_blank" rel="noopener noreferrer">
+						<button className="w-fit h-auto px-12 py-3 font-aot text-3xl bg-[#4a2013] text-white rounded-lg cursor-pointer" onClick={open}>Whitepaper</button>
+					</a>
+
+				</div>
+
 			</div>
 
 
