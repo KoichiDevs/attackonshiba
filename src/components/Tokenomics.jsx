@@ -24,7 +24,7 @@ const Tokenomics = () => {
     }, [circView])
 
     return (
-        <section className='w-full h-full  py-20 relative md:bg-myblack bg-button'>
+        <section className='w-full h-full  py-20 relative md:bg-myblack bg-button' id="tokenomics">
 
             <div className='md:block hidden absolute lg:top-0 top-[-10rem] bottom-0 my-auto w-full bg-button lg:h-[55%] h-[60%] z-0'></div>
 

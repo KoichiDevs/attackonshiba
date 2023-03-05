@@ -94,7 +94,7 @@ const Roadmap = () => {
 	)
 
 	return (
-		<section className="w-full h-auto relative bg-gradient-to-b from-myblack to-[#523531]">
+		<section className="w-full h-auto relative bg-gradient-to-b from-myblack to-[#523531]"  id="roadmap">
 
 			<div className="absolute w-full h-full bg-topog bg-[length:400px_400px] shadow-road"></div>
 
@@ -122,7 +122,7 @@ const Roadmap = () => {
 					<button className="w-fit h-auto px-12 py-3 font-aot text-3xl bg-[#4a2013] text-white rounded-lg cursor-pointer" onClick={open}>Disclaimer</button>
 
 					<a href="https://attackonshiba.com/atos-whitepaper.pdf" target="_blank" rel="noopener noreferrer">
-						<button className="w-fit h-auto px-12 py-3 font-aot text-3xl bg-[#4a2013] text-white rounded-lg cursor-pointer" onClick={open}>Whitepaper</button>
+						<button className="w-fit h-auto px-12 py-3 font-aot text-3xl bg-[#4a2013] text-white rounded-lg cursor-pointer">Whitepaper</button>
 					</a>
 
 				</div>

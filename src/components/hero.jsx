@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { MdOutlineClose } from 'react-icons/md'
+import { FaApplePay, FaCcVisa, FaCcMastercard } from 'react-icons/fa'
+import Nav from './Nav';
 
 const Hero = () => {
     const animation = useAnimation()
@@ -56,6 +58,11 @@ const Hero = () => {
             label: 'Arb',
             link: ''
         },
+        {
+            label: 'Fiat',
+            link: 'https://tindr.xyz/eth/0xf0a3a52eef1ebe77bb2743f53035b5813afe721f'
+        },
+
 
     ]
 
@@ -71,6 +78,8 @@ const Hero = () => {
 
     const popup = (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="HeroKey">
+
+
             <div className="w-full h-full bg-black opacity-50 absolute top-0 left-0 cursor-pointer" onClick={close}></div>
             <motion.div initial={{ scale: 0.5 }} animate={{ scale: 1 }} exit={{ scale: 0.5 }} transition={{ duration: 0.3 }} className="z-10 relative w-fit h-auto px-10 py-8 bg-[#24191e] text-white rounded-xl">
 
@@ -82,9 +91,17 @@ const Hero = () => {
                 <div className="flex items-center gap-x-3 mt-5 md:flex-row flex-col gap-y-3">
                     {buywith.map((items, index) => {
                         return (
-                            <a href={items.link} target="_blank" rel="noreferrer noopener">
-                                <button className='w-fit h-auto px-10 py-3 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' key={index}>
+                            <a href={items.link} target="_blank" rel="noreferrer noopener" key={index}>
+                                <button className='w-fit h-16 px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' key={index}>
+
                                     <p>{items.label}</p>
+                                    {items.label === "Fiat" ?
+                                        <div className="flex gap-x-2 text-lg">
+                                            <FaApplePay />
+                                            <FaCcVisa />
+                                            <FaCcMastercard />
+                                        </div> : null}
+
                                 </button>
                             </a>
 
@@ -98,11 +115,13 @@ const Hero = () => {
     return (
 
         <section className='w-full h-screen min-h-[600px] overflow-hidden relative flex flex-col bg-main sm:gap-y-7 gap-y-3 sm:justify-start justify-between bg-hero bg-cover md:bg-right sm:bg-[center_right_-10rem] z-10'>
+            <Nav />
+
             <AnimatePresence>
                 {buttonActive ? popup : null}
             </AnimatePresence>
 
-            <div className='absolute top-0 w-full h-2 bg-button shadow-upper'></div>
+            <div className='absolute top-0 w-full h-7 bg-button shadow-upper'></div>
 
             <div className='w-full max-w-[1700px] mx-auto sm:px-14 mt-14 relative h-[20%] '>
                 <div className='text-button md:text-6xl font-bold text-4xl absolute bottom-0 mx-auto left-0 right-0 w-fit sm:auto sm:right-auto sm:w-auto sm:px-12'>

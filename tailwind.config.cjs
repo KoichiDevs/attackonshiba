@@ -27,7 +27,7 @@ module.exports = {
 
             },
             boxShadow: {
-                upper: '0px 2px 18px 15px rgba(64,38,34,1)',
+                upper: '0px 15px 18px 15px rgba(64,38,34,1)',
                 road: '0px 28px 33px 0px rgb(22, 22, 22,1) inset',
 
             },

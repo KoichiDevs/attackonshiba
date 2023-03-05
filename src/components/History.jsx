@@ -42,7 +42,7 @@ const History = () => {
 
     return (
         <Container>
-            <div className='flex items-center justify-center text-main flex-col lg:flex-row gap-y-5 mt-10'>
+            <div className='flex items-center justify-center text-main flex-col lg:flex-row gap-y-5 mt-10' id="about">
                 <div className='w-full relative'>
                     <img src="/started.webp" alt="Started" ref={scoutRef}></img>
                     <motion.img initial={{ y: 200 }} animate={animation} src="/startedscout.webp" alt="Scout" className='absolute lg:bottom-[-4rem] md:bottom-[-2rem] bottom-0 lg:w-[25rem] md:w-[20rem] w-[50%] lg:right-[-4rem] right-0'></motion.img>
