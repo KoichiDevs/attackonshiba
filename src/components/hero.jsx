@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { MdOutlineClose } from 'react-icons/md'
-import { FaApplePay, FaCcVisa, FaCcMastercard } from 'react-icons/fa'
+import { FaApplePay, FaCcVisa, FaCcMastercard, FaEthereum, FaAirbnb } from 'react-icons/fa'
 import Nav from './Nav';
 
 const Hero = () => {
@@ -44,23 +44,49 @@ const Hero = () => {
     const buywith = [
         {
             label: 'Eth',
-            link: 'https://app.uniswap.org/#/swap?outputCurrency=0xf0a3a52eef1ebe77bb2743f53035b5813afe721f'
+            link: 'https://app.uniswap.org/#/swap?outputCurrency=0xf0a3a52eef1ebe77bb2743f53035b5813afe721f',
+            logo:
+                <>
+                    <FaEthereum />
+                </>
         },
         {
             label: 'BNB',
-            link: ''
+            link: '',
+            logo:
+                <>
+                    <FaAirbnb />
+                </>
         },
         {
             label: 'Shib',
-            link: ''
+            link: '',
+            logo:
+                <>
+                    <div className="w-4 h-4 relative mt-[3px]">
+                        <img src="/shib.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                    </div>
+                </>
         },
         {
             label: 'Arb',
-            link: ''
+            link: '',
+            logo:
+                <>
+                    <div className="w-4 h-4 relative mt-[3px]">
+                        <img src="/arb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                    </div>
+                </>
         },
         {
             label: 'Fiat',
-            link: 'https://tindr.xyz/eth/0xf0a3a52eef1ebe77bb2743f53035b5813afe721f'
+            link: 'https://tindr.xyz/eth/0xf0a3a52eef1ebe77bb2743f53035b5813afe721f',
+            logo:
+                <>
+                    <FaApplePay />
+                    <FaCcVisa />
+                    <FaCcMastercard />
+                </>
         },
 
 
@@ -92,15 +118,13 @@ const Hero = () => {
                     {buywith.map((items, index) => {
                         return (
                             <a href={items.link} target="_blank" rel="noreferrer noopener" key={index}>
-                                <button className='w-fit h-16 px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' key={index}>
+                                <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key={index}>
 
                                     <p>{items.label}</p>
-                                    {items.label === "Fiat" ?
-                                        <div className="flex gap-x-2 text-lg">
-                                            <FaApplePay />
-                                            <FaCcVisa />
-                                            <FaCcMastercard />
-                                        </div> : null}
+
+                                    <div className="flex gap-x-2 text-lg">
+                                        {items.logo}
+                                    </div>
 
                                 </button>
                             </a>
