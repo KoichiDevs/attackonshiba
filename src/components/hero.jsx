@@ -43,7 +43,7 @@ const Hero = () => {
 
     const buywith = [
         {
-            label: 'Eth',
+            label: 'ETH',
             link: 'https://app.uniswap.org/#/swap?outputCurrency=0xf0a3a52eef1ebe77bb2743f53035b5813afe721f',
             logo:
                 <>
@@ -61,7 +61,7 @@ const Hero = () => {
                 </>
         },
         {
-            label: 'Shib',
+            label: 'SHIB',
             link: '',
             logo:
                 <>
@@ -71,7 +71,7 @@ const Hero = () => {
                 </>
         },
         {
-            label: 'Arb',
+            label: 'ARB',
             link: '',
             logo:
                 <>
@@ -80,21 +80,15 @@ const Hero = () => {
                     </div>
                 </>
         },
-        {
-            label: 'Fiat',
-            link: 'https://tindr.xyz/eth/0xf0a3a52eef1ebe77bb2743f53035b5813afe721f',
-            logo:
-                <>
-                    <FaApplePay />
-                    <FaCcVisa />
-                    <FaCcMastercard />
-                </>
-        },
+        
 
 
     ]
 
+    
+
     const [buttonActive, setActive] = useState(false)
+    const [newButtonActive, setNewButtonActive] = useState(false)
 
     const open = () => {
         setActive(true)
@@ -104,6 +98,64 @@ const Hero = () => {
         setActive(false)
     }
 
+    const openNew = () => {
+        setNewButtonActive(true)
+    }
+    
+    const closeNew = () => {
+        setNewButtonActive(false)
+    }
+    const newPopup = (
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="NewHeroKey">
+            <div className="w-full h-full bg-black opacity-50 absolute top-0 left-0 cursor-pointer" onClick={closeNew}></div>
+            <motion.div initial={{ scale: 0.5 }} animate={{ scale: 1 }} exit={{ scale: 0.5 }} transition={{ duration: 0.3 }} className="z-10 relative w-fit h-auto px-10 py-8 bg-[#24191e] text-white rounded-xl">
+                <MdOutlineClose className='absolute top-4 right-4 text-white text-2xl cursor-pointer' onClick={closeNew} />
+                <h1 className='font-aot text-3xl text-center'>Buy with Fiat</h1>
+                <h1 className='font-aot text-3xl text-center'>Choose the network:</h1>
+                <div className="flex items-center gap-x-3 mt-5 md:flex-row flex-col gap-y-3">
+                    <a href="https://tindr.xyz/eth/0xf0a3a52eef1ebe77bb2743f53035b5813afe721f" target="_blank" rel="noreferrer noopener">
+                        <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
+                            <p>ATOS ETH</p>
+                            <div className="flex gap-x-2 text-lg">
+                            <FaEthereum />
+                            </div>
+                        </button>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer noopener">
+                        <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
+                            <p>ATOS BNB</p>
+                            <div className="flex gap-x-2 text-lg">
+                            <div className="w-4 h-4 relative mt-[3px]">
+                        <img src="/bnb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                    </div>
+                            </div>
+                        </button>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer noopener">
+                        <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
+                            <p>ATOS SHIB</p>
+                            <div className="flex gap-x-2 text-lg">
+                            <div className="w-4 h-4 relative mt-[3px]">
+                        <img src="/shib.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                    </div>
+                            </div>
+                        </button>
+                    </a>
+                    <a href="#" target="_blank" rel="noreferrer noopener">
+                        <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
+                            <p>ATOS ARB</p>
+                            <div className="flex gap-x-2 text-lg">
+                            <div className="w-4 h-4 relative mt-[3px]">
+                        <img src="/arb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                    </div>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </motion.div>
+        </motion.div>
+    )
+    
     const popup = (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="HeroKey">
 
@@ -145,8 +197,9 @@ const Hero = () => {
 
             <AnimatePresence>
                 {buttonActive ? popup : null}
+                {newButtonActive ? newPopup : null}
             </AnimatePresence>
-
+            
             <div className='absolute top-0 w-full h-7 bg-button shadow-upper'></div>
 
             <div className='w-full max-w-[1700px] mx-auto sm:px-14 mt-14 relative h-[20%] '>
@@ -169,7 +222,15 @@ const Hero = () => {
 
                             <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 100, y: 0 }} transition={{ delay: 1, duration: 2, ease: [.21, 1.03, .27, 1] }} className='font-aot mt-9 flex gap-x-3 gap-y-3 text-xs md:text-md xl:text-xl'>
                                 <div className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={open}>
-                                    <p>Buy token</p>
+                                    <p>Buy with Crypto</p>
+                                </div>
+                                <div className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={openNew} style={{ display: 'flex', alignItems: 'center' }}>
+                                    <div className='flex gap-x-2'>
+                                        <FaApplePay />
+                                        <FaCcVisa />
+                                        <FaCcMastercard />
+                                    </div>
+                                    <p className='ml-2'>Buy with Fiat</p>
                                 </div>
                                 <div className='w-fit h-auto px-10 py-3 cursor-pointer text-main bg-none border-[1px] border-main hover:bg-main hover:text-button transition-all ease-in-out duration-300'>
                                     <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x8a6fc18e27338876810e1770f9158a1a271f90ab" target="_blank">Chart</a>
