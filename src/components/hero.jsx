@@ -55,7 +55,7 @@ const Hero = () => {
             link: '',
             logo:
                 <>
-                    <FaBNB />
+                    <FaBinance />
                 </>
         },
         {
