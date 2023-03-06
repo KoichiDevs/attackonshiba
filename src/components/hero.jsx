@@ -55,7 +55,9 @@ const Hero = () => {
             link: '',
             logo:
                 <>
-                    <FaBinance />
+                    <div className="w-4 h-4 relative mt-[3px]">
+                        <img src="/bnb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                    </div>
                 </>
         },
         {
