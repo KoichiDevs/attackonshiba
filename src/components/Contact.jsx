@@ -7,6 +7,7 @@ const Contact = () => {
                 <div className='text-main font-aot sm:text-5xl text-3xl'>
                     <h1>For business inquiries and</h1>
                     <h1>proposals, please send us an email</h1>
+                    <p className='text-xl font-mono mt-5'>contact@attackonshiba.com</p>
                 </div>
 
                 <div className='w-fit h-fit px-10 py-3 bg-main cursor-pointer hover:scale-[1.1] hover:opacity-100 transition-all ease-in-out duration-300 font-bree opacity-70'>
