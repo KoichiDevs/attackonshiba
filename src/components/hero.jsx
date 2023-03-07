@@ -219,7 +219,9 @@ const Hero = () => {
                             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 1, delay: 0.9 }} className='md:max-w-[550px] xl:text-lg md:text-sm text-xs max-w-[290px] leading-4 text-center sm:text-left mx-auto font-pop'>
                                 Welcome to Attack on Shiba, the first meme of its kind that rewards holders through native cross-chain reflections. Attack on Shiba aims to protect the world of meme tokens by defending the city against evil AI manipulated Shiba's and boosting every chart with its unique technology.
                             </motion.p>
-
+                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 1, delay: 0.9 }} className='mt-5 md:max-w-[550px] xl:text-lg md:text-sm text-xs max-w-[290px] leading-4 text-center sm:text-left mx-auto font-pop'>
+                            0xf0a3a52eef1ebe77bb2743f53035b5813afe721f
+                            </motion.p>
                             <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 100, y: 0 }} transition={{ delay: 1, duration: 2, ease: [.21, 1.03, .27, 1] }} className='font-aot mt-9 flex gap-x-3 gap-y-3 text-xs md:text-md xl:text-xl'>
                                 <div className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={open}>
                                     <p>Buy with Crypto</p>
