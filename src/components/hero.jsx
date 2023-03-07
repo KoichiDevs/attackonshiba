@@ -80,12 +80,12 @@ const Hero = () => {
                     </div>
                 </>
         },
-        
+
 
 
     ]
 
-    
+
 
     const [buttonActive, setActive] = useState(false)
     const [newButtonActive, setNewButtonActive] = useState(false)
@@ -101,10 +101,11 @@ const Hero = () => {
     const openNew = () => {
         setNewButtonActive(true)
     }
-    
+
     const closeNew = () => {
         setNewButtonActive(false)
     }
+
     const newPopup = (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="NewHeroKey">
             <div className="w-full h-full bg-black opacity-50 absolute top-0 left-0 cursor-pointer" onClick={closeNew}></div>
@@ -117,7 +118,7 @@ const Hero = () => {
                         <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
                             <p>ATOS ETH</p>
                             <div className="flex gap-x-2 text-lg">
-                            <FaEthereum />
+                                <FaEthereum />
                             </div>
                         </button>
                     </a>
@@ -125,9 +126,9 @@ const Hero = () => {
                         <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
                             <p>ATOS BNB</p>
                             <div className="flex gap-x-2 text-lg">
-                            <div className="w-4 h-4 relative mt-[3px]">
-                        <img src="/bnb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
-                    </div>
+                                <div className="w-4 h-4 relative mt-[3px]">
+                                    <img src="/bnb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                                </div>
                             </div>
                         </button>
                     </a>
@@ -135,9 +136,9 @@ const Hero = () => {
                         <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
                             <p>ATOS SHIB</p>
                             <div className="flex gap-x-2 text-lg">
-                            <div className="w-4 h-4 relative mt-[3px]">
-                        <img src="/shib.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
-                    </div>
+                                <div className="w-4 h-4 relative mt-[3px]">
+                                    <img src="/shib.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                                </div>
                             </div>
                         </button>
                     </a>
@@ -145,9 +146,9 @@ const Hero = () => {
                         <button className='w-fit h-[4.2rem] px-10 bg-button rounded-lg cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300 flex flex-col items-center justify-center gap-y-[3px]' key="newButton">
                             <p>ATOS ARB</p>
                             <div className="flex gap-x-2 text-lg">
-                            <div className="w-4 h-4 relative mt-[3px]">
-                        <img src="/arb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
-                    </div>
+                                <div className="w-4 h-4 relative mt-[3px]">
+                                    <img src="/arb.webp" alt="" className="object-cover w-full h-full absolute left-0 top-0" />
+                                </div>
                             </div>
                         </button>
                     </a>
@@ -155,7 +156,7 @@ const Hero = () => {
             </motion.div>
         </motion.div>
     )
-    
+
     const popup = (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 100 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} className="w-full h-screen fixed left-0 top-0 z-50 grid place-items-center" key="HeroKey">
 
@@ -199,7 +200,7 @@ const Hero = () => {
                 {buttonActive ? popup : null}
                 {newButtonActive ? newPopup : null}
             </AnimatePresence>
-            
+
             <div className='absolute top-0 w-full h-7 bg-button shadow-upper'></div>
 
             <div className='w-full max-w-[1700px] mx-auto sm:px-14 mt-14 relative h-[20%] '>
@@ -220,9 +221,9 @@ const Hero = () => {
                                 Welcome to Attack on Shiba, the first meme of its kind that rewards holders through native cross-chain reflections. Attack on Shiba aims to protect the world of meme tokens by defending the city against evil AI manipulated Shiba's and boosting every chart with its unique technology.
                             </motion.p>
                             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 1, delay: 0.9 }} className='mt-5 md:max-w-[550px] xl:text-lg md:text-sm text-xs max-w-[290px] leading-4 text-center sm:text-left mx-auto font-pop'>
-                            0xf0a3a52eef1ebe77bb2743f53035b5813afe721f
+                                0xf0a3a52eef1ebe77bb2743f53035b5813afe721f
                             </motion.p>
-                            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 100, y: 0 }} transition={{ delay: 1, duration: 2, ease: [.21, 1.03, .27, 1] }} className='font-aot mt-9 flex gap-x-3 gap-y-3 text-xs md:text-md xl:text-xl'>
+                            <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 100, y: 0 }} transition={{ delay: 1, duration: 2, ease: [.21, 1.03, .27, 1] }} className='font-aot mt-9 flex gap-x-3 gap-y-3 text-xs md:text-md xl:text-xl md:flex-row flex-col items-center md:items-start'>
                                 <div className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={open}>
                                     <p>Buy with Crypto</p>
                                 </div>

@@ -58,9 +58,9 @@ const Nav = () => {
                 <ul className={`items-center flex lg:relative fixed right-0 lg:w-auto lg:h-auto w-full h-full top-0 justify-center lg:justify-start flex-col lg:flex-row bg-[#111111] lg:bg-transparent gap-y-20 text-xl lg:text-sm opacity-0 transition-all ease-in-out duration-300 lg:opacity-100 lg:pointer-events-auto pointer-events-none font-saira ${scrolled ? "gap-x-12" : "gap-x-16"}`} style={active ? { opacity: "100%", pointerEvents: "auto" } : {}}>
 
                     <li className='absolute lg:hidden block text-4xl top-10 right-10'><RiCloseFill onClick={setToggle} /></li>
-                    {list.map((items) => {
+                    {list.map((items, i) => {
                         return (
-                            <div className='flex flex-col items-center gap-y-[5px] select-none' key={items} >
+                            <div className='flex flex-col items-center gap-y-[5px] select-none' key={i} >
                                 <a href={`${items.target}`} className="peer">
                                     <li className="uppercase font-medium cursor-pointer peer hover:text-header transition-colors ease-in-out duration-300" onClick={() => { setActive(false) }}>{items.label}</li>
                                 </a>
