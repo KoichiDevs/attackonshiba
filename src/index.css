@@ -9,3 +9,19 @@
     font-family: 'AotFont';
     src: url('../fonts/aotfont.ttf');
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #090311;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #82798C;
+    border-radius: 5px;
+  }

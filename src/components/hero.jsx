@@ -201,7 +201,7 @@ const Hero = () => {
                 {newButtonActive ? newPopup : null}
             </AnimatePresence>
 
-            <div className='absolute top-0 w-full h-7 bg-button shadow-upper'></div>
+            {/* <div className='absolute top-0 w-full h-7 bg-black shadow-upper'></div> */}
 
             <div className='w-full max-w-[1700px] mx-auto sm:px-14 mt-14 relative h-[20%] '>
                 <div className='text-button md:text-6xl font-bold text-4xl absolute bottom-0 mx-auto left-0 right-0 w-fit sm:auto sm:right-auto sm:w-auto sm:px-12'>
@@ -224,21 +224,25 @@ const Hero = () => {
                                 0xf0a3a52eef1ebe77bb2743f53035b5813afe721f
                             </motion.p>
                             <motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 100, y: 0 }} transition={{ delay: 1, duration: 2, ease: [.21, 1.03, .27, 1] }} className='font-aot mt-9 flex gap-x-3 gap-y-3 text-xs md:text-md xl:text-xl md:flex-row flex-col items-center md:items-start'>
-                                <div className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={open}>
+                                <button className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={open}>
                                     <p>Buy with Crypto</p>
-                                </div>
-                                <div className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={openNew} style={{ display: 'flex', alignItems: 'center' }}>
+                                </button>
+
+
+                                <button className='w-fit h-auto px-10 py-3 bg-button cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300' onClick={openNew} style={{ display: 'flex', alignItems: 'center' }}>
                                     <div className='flex gap-x-2'>
                                         <FaApplePay />
                                         <FaCcVisa />
                                         <FaCcMastercard />
                                     </div>
                                     <p className='ml-2'>Buy with Fiat</p>
-                                </div>
+                                </button>
                                 <div className='w-fit h-auto px-10 py-3 cursor-pointer text-main bg-none border-[1px] border-main hover:bg-main hover:text-button transition-all ease-in-out duration-300'>
                                     <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x8a6fc18e27338876810e1770f9158a1a271f90ab" target="_blank">Chart</a>
                                 </div>
                             </motion.div>
+
+     
                         </div>
 
                         <div className='w-full'>
