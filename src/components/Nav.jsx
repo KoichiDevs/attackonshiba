@@ -72,7 +72,7 @@ const Nav = () => {
 
                     <a href="" target="_blank" rel="noreferrer noopener" className="">
                         <button className='w-fit h-auto px-10 py-3 bg-button text-white cursor-pointer hover:bg-buttonHover transition-all ease-in-out duration-300'>
-                            <a href="https://attack-on-shiba-staking.vercel.app" target="_blank">Launch DApp</p>
+                            <a href="#" target="_blank">Launch DApp</a>
                         </button>
                     </a>
                 </ul>
