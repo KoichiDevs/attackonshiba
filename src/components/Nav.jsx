@@ -23,6 +23,10 @@ const Nav = () => {
             label: 'Whitepaper',
             target: 'https://www.attackonshiba.com/atos-whitepaper.pdf'
         },
+        {
+            label: 'Staking',
+            target: 'https://attack-on-shiba-staking.vercel.app'
+        },
 
     ]
     const [active, setActive] = useState(false)
